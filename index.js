@@ -1,8 +1,18 @@
+/**
+ * Task List Manager
+ * - Allows users to add, reorder, and delete tasks.
+ * - Uses localStorage to persist tasks across sessions.
+ */
+
 // Retrieve existing tasks from localStorage or initialize an empty object
 const taskListStr = localStorage.getItem("taskList");
 const taskListObj = taskListStr ? JSON.parse(taskListStr) : {};
 
-// Utility function to check if an object is empty
+/**
+ * Check if an object is empty (has no keys).
+ * @param {Object} obj - The object to check.
+ * @returns {boolean} True if the object is empty, otherwise false.
+ */
 function isEmpty(obj) {
   return Object.keys(obj).length === 0;
 }
